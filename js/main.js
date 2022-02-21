@@ -80,45 +80,28 @@ function enterSend() {
 // Animacion 
 
 $("#logo1").on("mouseover", function () {
-  $("#logo1").addClass("animate__animated animate__swing").delay(1300).queue(function(remover){
+  $("#logo1").addClass("animate__animated animate__swing").delay(1800).queue(function (remover) {
     $(this).removeClass("animate__animated animate__swing");
     remover();
   });
-  
+
 });
 
 
 
 
-// Api
+// Api   https://www.currencyconverterapi.com/docs
 
 
+// API KEY: 9bf500827d535b9c4940
 
-// const datosApi =
-//   $.ajax({
-//     method: "GET",
-//     url: 'http://data.fixer.io/api/latest?access_key=f1eb0dca9efe37da6d347582f5fffa29',
-//     success: function (respuesta) {
-//       console.log(respuesta);
-//       console.log(respuesta.rates.ARS);
-//       console.log(respuesta.rates.USD);
+  //Fetch
 
+  var fetchApi = fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
-//       $('#boton').click(function () {
-//         let resultado1 = moneda1.value / respuesta.rates.ARS;
-//         let resultado = resultado1 / respuesta.rates.USD;
-//         resultado = resultado.toFixed(2);
-
-//         // $(`#resultado2`).text(moneda1.value + ' Pesos Argentinos = ' + resultado + ' Dolar API')
-
-//         // console.log(`Pesos a dolar =` + resultado);
-
-
-//       });
-
-
-//     }
-//   });
+  
 
 
 

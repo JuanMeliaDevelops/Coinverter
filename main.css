@@ -3,15 +3,16 @@ html {
 }
 
 header {
+    height: 22vh;
     background-color:yellow;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
 }
 
 header img {
     margin-left:5% ;
-    width: 10vw;
+    
 }
 
 
@@ -86,8 +87,6 @@ header img {
     width: 100%;
     background-color: black;
     margin: auto;
-    position: absolute;
-    bottom: 0;
 }
 
 .footer ul  {
