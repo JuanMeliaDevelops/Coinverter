@@ -97,14 +97,18 @@ $("#logo1").on("mouseover", function () {
 
   //Fetch
 
-  var fetchApi = fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940')
+  var fetchApiList = fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940')
   .then(response => response.json())
   .then(data => console.log(data));
 
-  
+  var fetchApiCurrency = fetch('https://free.currconv.com/api/v7/convert?q=AED_PHP,AED_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
-
-
+  //const fetchApiCurrency = (currencyId) => {
+    //fetch('https://free.currconv.com/api/v7/convert?q=${currencyId}_PHP,${currencyId}_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
+  //.then(response => response.json())
+  //.then(data => console.log(data));  } 
 
 
 
