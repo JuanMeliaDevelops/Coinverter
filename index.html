@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
 </head>
@@ -22,34 +22,42 @@
     <h5 class="historial">
       <ul class="navbar">
         <li class="nav-item"><a href="index.html">Inicio</a></li>
-        <li class="nav-item" ><a  href="historial.html">Historial de conversiones</a></li>
-      </ul> 
+        <li class="nav-item"><a href="historial.html">Historial de conversiones</a></li>
+      </ul>
     </h5>
   </header>
 
 
   <section class="sect1">
-  
 
-    
-    <h3>Convierte pesos Argentinos a Dolar Blue</h3>
+
+
+    <h3 id="prueba1">Convierte pesos Argentinos a Dolar Blue</h3>
 
     <form name="convertidor" id="formulario">
       <div class="form-group">
-       
-        <label for="moneda1">Peso Argentino:</label>
-        <input type="number" onkeypress='return validaNumeros(event);' onclick="enterSend(); IsEmpty();"  pattern="^[0-9]" min="0" id="moneda1"
-          name="moneda1" required value="">
-      </div>    
+
+        <label for="moneda1">Moneda 1:</label>
+        <select name="monedas1" id="selectMoneda1">
+          <option value="">elegi una moneda</option>
+        </select>
+
+        <input type="number" onkeypress='return validaNumeros(event);' onclick="enterSend(); IsEmpty();"
+          pattern="^[0-9]" min="0" id="moneda1" name="moneda1" required value="">
+      </div>
 
       <div class="form-group">
-     
-        <label for="moneda2">Dolar:</label>
+
+        <label for="moneda2">Moneda 2:</label>
+        <select name="monedas2" id="selectMoneda2">
+          <option value="">elegi una moneda</option>
+        </select>
+
         <input type="" id="moneda2" onkeypress='return validaNumeros(event)' name="moneda2" value=""
           readonly="readonly">
       </div>
 
-      <input onclick="cDolar();"  id="boton" type="button"  value="Convertir" class="btn-dark btn-lg"></input>
+      <input onclick="cDolar();" id="boton" type="button" value="Convertir" class="btn-dark btn-lg"></input>
     </form>
 
     <h2 id="resultado"></h2>
@@ -65,18 +73,60 @@
     </ul>
   </footer>
 
+  <script>
 
+    const selectMoneda1 = document.getElementById('selectMoneda1');
+    const selectMoneda2 = document.getElementById('selectMoneda2');
+
+    function cargarApi() {
+
+
+      async function getApiAsync() {
+
+try {
+  const apiFetch = await fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940');
+  const data = await apiFetch.json();
+  // console.log(data)
+
+
+  //Select Api 
+
+
+  const opcionesMoneda1 = `  <option value="">elegi una moneda</option> `;
+  data.results.forEach(element => opcionesMoneda1 +=   `  <option value=" ${element} "> ${element} </option> ` );
+  selectMoneda1.innerHTML = opcionesMoneda1;
+}
+
+
+    
+catch (error) {
+  console.log(error);
+  document.getElementById('resultado').innerText = `Ha surgido un error porfavor intente de nuevo mas tarde`
+}
+
+
+
+}
+getApiAsync()
+    }
+   
+
+    document.addEventListener('DOMContentLoaded', cargarApi);
+
+
+  </script>
 
 
   <!-- JavaScript Bundle with Popper -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <script src="js/storage.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
 
-   
+
 
 </body>
 

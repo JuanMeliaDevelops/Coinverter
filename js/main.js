@@ -2,8 +2,6 @@ const moneda1 = document.getElementById("moneda1");
 const moneda2 = document.getElementById("moneda2");
 
 
-
-
 // Creador de Monedas Objetos
 function moneda(id, nombreMoneda, iso, origen, simbolo, precioPesos) {
   this.id = id;
@@ -56,7 +54,7 @@ function cDolar() {
 // EVENTOS
 
 
-// Evento solo numeros
+//      Evento solo numeros
 
 function validaNumeros(event) {
   if (event.charCode >= 48 && event.charCode <= 57) {
@@ -95,15 +93,37 @@ $("#logo1").on("mouseover", function () {
 
 // API KEY: 9bf500827d535b9c4940
 
-  //Fetch
+//Fetch
 
-  var fetchApiList = fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940')
-  .then(response => response.json())
-  .then(data => console.log(data));
+// async function getApiAsync() {
 
-  var fetchApiCurrency = fetch('https://free.currconv.com/api/v7/convert?q=AED_PHP,AED_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
-  .then(response => response.json())
-  .then(data => console.log(data));
+//   try {
+//     const apiFetch = await fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940');
+//     const data = await apiFetch.json();
+//     const results = data.results;
+//     console.log(data.results);
+
+
+
+//   }
+//   catch (error) {
+//     console.log(error);
+//   }
+
+// }
+
+// getApiAsync()
+
+
+
+
+  // var fetchApiList = fetch('')
+  // .then(response => response.json())
+  // .then(data => console.log(data));
+
+  // var fetchApiCurrency = fetch('https://free.currconv.com/api/v7/convert?q=AED_PHP,AED_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
+  // .then(response => response.json())
+  // .then(data => console.log(data));
 
   //const fetchApiCurrency = (currencyId) => {
     //fetch('https://free.currconv.com/api/v7/convert?q=${currencyId}_PHP,${currencyId}_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
