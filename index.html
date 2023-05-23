@@ -80,36 +80,52 @@
 
     function cargarApi() {
 
+      var myHeaders = new Headers();
+      myHeaders.append("apikey", "BXTMG1IkUyV7t6f7dYJZUWUrxgyl9GJT");
+
+
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        headers: myHeaders
+      };
+
+
 
       async function getApiAsync() {
 
-try {
-  const apiFetch = await fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940');
-  const data = await apiFetch.json();
-  // console.log(data)
+        try {
+          const apiFetch = await fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+
+          const data = await apiFetch.json();
+
+           console.log(data);
 
 
-  //Select Api 
+          //Select Api 
 
 
-  const opcionesMoneda1 = `  <option value="">elegi una moneda</option> `;
-  data.results.forEach(element => opcionesMoneda1 +=   `  <option value=" ${element} "> ${element} </option> ` );
-  selectMoneda1.innerHTML = opcionesMoneda1;
-}
-
-
-    
-catch (error) {
-  console.log(error);
-  document.getElementById('resultado').innerText = `Ha surgido un error porfavor intente de nuevo mas tarde`
-}
+          const opcionesMoneda1 = `  <option value="">elegi una moneda</option> `;
+          data.results.forEach(element => opcionesMoneda1 += `  <option value=" ${element} "> ${element} </option> `);
+          selectMoneda1.innerHTML = opcionesMoneda1;
+        }
 
 
 
-}
-getApiAsync()
+        catch (error) {
+          console.log(error);
+          document.getElementById('resultado').innerText = `Ha surgido un error porfavor intente de nuevo mas tarde`
+        }
+
+
+
+      }
+      getApiAsync()
     }
-   
+
 
     document.addEventListener('DOMContentLoaded', cargarApi);
 

@@ -88,49 +88,21 @@ $("#logo1").on("mouseover", function () {
 
 
 
-// Api   https://www.currencyconverterapi.com/docs
+// Api 
 
+// var myHeaders = new Headers();
+// myHeaders.append("apikey", "BXTMG1IkUyV7t6f7dYJZUWUrxgyl9GJT");
 
-// API KEY: 9bf500827d535b9c4940
+// var requestOptions = {
+//   method: 'GET',
+//   redirect: 'follow',
+//   headers: myHeaders
+// };
 
-//Fetch
-
-// async function getApiAsync() {
-
-//   try {
-//     const apiFetch = await fetch('https://free.currconv.com/api/v7/currencies?apiKey=9bf500827d535b9c4940');
-//     const data = await apiFetch.json();
-//     const results = data.results;
-//     console.log(data.results);
-
-
-
-//   }
-//   catch (error) {
-//     console.log(error);
-//   }
-
-// }
-
-// getApiAsync()
-
-
-
-
-  // var fetchApiList = fetch('')
-  // .then(response => response.json())
-  // .then(data => console.log(data));
-
-  // var fetchApiCurrency = fetch('https://free.currconv.com/api/v7/convert?q=AED_PHP,AED_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
-  // .then(response => response.json())
-  // .then(data => console.log(data));
-
-  //const fetchApiCurrency = (currencyId) => {
-    //fetch('https://free.currconv.com/api/v7/convert?q=${currencyId}_PHP,${currencyId}_USD&compact=ultra&apiKey=9bf500827d535b9c4940')
-  //.then(response => response.json())
-  //.then(data => console.log(data));  } 
-
-
+//  fetch("https://api.apilayer.com/exchangerates_data/convert?to={to}&from={from}&amount={amount}", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
 
 
 
