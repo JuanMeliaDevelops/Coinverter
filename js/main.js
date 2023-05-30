@@ -86,28 +86,3 @@ $("#logo1").on("mouseover", function () {
 });
 
 
-
-
-// Api 
-
-// var myHeaders = new Headers();
-// myHeaders.append("apikey", "BXTMG1IkUyV7t6f7dYJZUWUrxgyl9GJT");
-
-// var requestOptions = {
-//   method: 'GET',
-//   redirect: 'follow',
-//   headers: myHeaders
-// };
-
-//  fetch("https://api.apilayer.com/exchangerates_data/convert?to={to}&from={from}&amount={amount}", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-
-
-
-
-
-
-
-
