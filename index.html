@@ -104,17 +104,14 @@
 
            console.log(data);
 
+           for (let i = 0; i < data.length; i++) {
+      const option = document.createElement('option');
+      option.value = data[i].valor;  // Reemplaza 'valor' con la propiedad adecuada de tus datos
+      option.text = data[i].nombre;  // Reemplaza 'nombre' con la propiedad adecuada de tus datos
+      selectElement.appendChild(option);
+    }
 
-          //Select Api 
-
-
-          const opcionesMoneda1 = `  <option value="">elegi una moneda</option> `;
-          data.results.forEach(element => opcionesMoneda1 += `  <option value=" ${element} "> ${element} </option> `);
-          selectMoneda1.innerHTML = opcionesMoneda1;
         }
-
-
-
         catch (error) {
           console.log(error);
           document.getElementById('resultado').innerText = `Ha surgido un error porfavor intente de nuevo mas tarde`
