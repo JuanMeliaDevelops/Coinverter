@@ -91,12 +91,18 @@
       try {
         const response = await fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions);
         const data = await response.json();
-        
+
         for (const key in data.symbols) {
-          const optionElement = document.createElement("option");
-          optionElement.value = key;
-          optionElement.text = data.symbols[key];
-          selectMoneda1.appendChild(optionElement);
+          const optionElement1 = document.createElement("option");
+          optionElement1.value = key;
+          optionElement1.text = data.symbols[key];
+          selectMoneda1.appendChild(optionElement1);
+
+          const optionElement2 = document.createElement("option");
+          optionElement2.value = key;
+          optionElement2.text = data.symbols[key];
+          selectMoneda2.appendChild(optionElement2);
+          
         }
       } catch (error) {
         console.log(error);
@@ -107,8 +113,6 @@
     cargarApi();
         
 
-
-    document.addEventListener('DOMContentLoaded', cargarApi);
 
 
   </script>
