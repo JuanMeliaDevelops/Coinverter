@@ -10,6 +10,9 @@ header {
     justify-content: space-between;
 }
 
+header img{
+    margin-left: 5%;
+}
 
 .ars-option, .usd-option{
     background-color: lightgray;
