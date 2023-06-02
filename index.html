@@ -75,6 +75,10 @@
 
   <script>
 
+    /* API DOLAR OFICIAL, BLUE : 
+    Documentacion: https://github.com/Castrogiovanni20/api-dolar-argentina
+     https://api-dolar-argentina.herokuapp.com/ */
+
     const selectMoneda1 = document.getElementById('selectMoneda1');
     const selectMoneda2 = document.getElementById('selectMoneda2');
 
@@ -92,6 +96,20 @@
         const response = await fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions);
         const data = await response.json();
 
+        console.log(data);
+
+        const usdOptionElement = document.createElement("option");
+        usdOptionElement.value = "USD";
+        usdOptionElement.text = "United States Dollar";
+        usdOptionElement.classList.add("usd-option");
+        selectMoneda1.appendChild(usdOptionElement);
+
+        const argOptionElement = document.createElement("option");
+        argOptionElement.value = "ARS";
+        argOptionElement.text = "Argentine Peso";
+        argOptionElement.classList.add("ars-option");
+        selectMoneda2.appendChild(argOptionElement);
+
         for (const key in data.symbols) {
           const optionElement1 = document.createElement("option");
           optionElement1.value = key;
@@ -102,7 +120,7 @@
           optionElement2.value = key;
           optionElement2.text = data.symbols[key];
           selectMoneda2.appendChild(optionElement2);
-          
+
         }
       } catch (error) {
         console.log(error);
@@ -111,7 +129,7 @@
     }
 
     cargarApi();
-        
+
 
 
 
@@ -131,4 +149,4 @@
 
 </body>
 
-</html> 
+</html>
