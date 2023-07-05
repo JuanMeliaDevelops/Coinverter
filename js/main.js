@@ -54,35 +54,3 @@ function cDolar() {
 // EVENTOS
 
 
-//      Evento solo numeros
-
-function validaNumeros(event) {
-  if (event.charCode >= 48 && event.charCode <= 57) {
-    return true;
-  }
-  return false;
-}
-
-//Evento Enter boton
-
-function enterSend() {
-  document.getElementById("moneda1").addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-      document.getElementById("boton").click();
-      return false;
-    }
-  })
-};
-
-
-// Animacion 
-
-$("#logo1").on("mouseover", function () {
-  $("#logo1").addClass("animate__animated animate__swing").delay(1800).queue(function (remover) {
-    $(this).removeClass("animate__animated animate__swing");
-    remover();
-  });
-
-});
-
-
