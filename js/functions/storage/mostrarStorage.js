@@ -3,8 +3,28 @@ function mostrarStorage() {
 
   const listaHistorialParse = JSON.parse(localStorage.getItem('storageJson'));
 
-  for (let i = 0; i < Math.min(listaHistorialParse.length, 10); i++) {
-    $('#plantillaCont').append(`
+  if (!listaHistorialParse) {
+    $("#plantilla").append(`
+
+    <div class="m-auto mt-5 align-content-center align-self-center">
+
+    <h4>Aun no has realizado ninguna conversion.</h4>
+    <div class="w-25 m-auto">
+    <img class="w-25 " src="imgs/sadFace.png" alt="">
+    </div>
+
+    </div>
+  
+
+
+
+
+`)
+  }
+  else {
+
+    for (let i = 0; i < Math.min(listaHistorialParse.length, 10); i++) {
+      $('#plantillaCont').append(`
   
         <tr>
           <th scope="row">${i + 1}</th>
@@ -16,7 +36,12 @@ function mostrarStorage() {
         </tr>
    
     `);
+    }
+
   }
+
+
+
 
 };
 
