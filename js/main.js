@@ -39,18 +39,3 @@ function aparecerResultado() {
   resultado.style.padding = '50px';
 };
 
-
-function cDolar() {
-  let resultado = moneda1.value / dolarBlue.precioPesos;
-  resultado = resultado.toFixed(2);
-  moneda2.value = resultado;
-  aparecerResultado();
-  guardarStorage();
-}
-
-
-
-
-// EVENTOS
-
-

@@ -26,7 +26,7 @@
   </header>
 
 
-  <section class="sect1">
+  <section class="sect2">
 
 
     <h4 class="historial col-2"><a href="index.html">Volver</a></h4>
@@ -37,9 +37,11 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Peso Argentino</th>
-            <th scope="col">Moneda</th>
-            <th scope="col">Conversion</th>
+            <th scope="col">De</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">A</th>
+            <th scope="col">Resultado</th>
+            <th scope="col">Hora de cambio</th>
           </tr>
         </thead>
         <tbody id="plantillaCont">
@@ -55,23 +57,34 @@
     <ul>
       <li>Coinverter® Todos los derechos reservados</li>
       <li>Coderhouse Javascript / Juan Ignacio Melia 2021 </li>
+      <li><a href="index.html">Inicio</a> </li>
       <li><a href="historial.html">Historial</a> </li>
     </ul>
   </footer>
 
 
 
-  <!-- JavaScript Bundle with Popper -->
+  <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="js/functions/enterBoton.js"></script>
-  <script src="js/functions/numberInput.js"></script>
-  <script src="js/functions/logoAnimation.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/storage.js"></script>
+
+  <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
+
+  <!-- functions -->
+  <script src="js/functions/conversor/swap.js"></script>
+  <script src="js/functions/conversor/convertir.js"></script>
+
+  <script src="js/functions/enterBoton.js"></script>
+  <script src="js/functions/numberInput.js"></script>
+  <script src="js/functions/logoAnimation.js"></script>
+
+  <script src="js/functions/storage/guardarStorage.js"></script>
+  <script src="js/functions/storage/mostrarStorage.js"></script>
+
+  <script src="js/main.js"></script>
 
 
   <script>$(document).ready(function () { mostrarStorage(); });</script>
