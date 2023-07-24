@@ -71,7 +71,7 @@ header img {
     margin-top: 2%;
     text-align: center;
     margin-bottom: 5%;
-    height: 64vh;
+    height: 66vh;
 
 }
 
@@ -150,3 +150,29 @@ header img {
 .tabla-container table {
     margin-top: 4%;
 }
+
+
+
+
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+   
+
+  }
+  
+
+  /* Moviles */
+  @media only screen and (max-width: 767px) {
+
+    header{
+        height: 10vh;
+    }
+
+    select{
+        width: 50%;
+        
+    }
+
+  }
