@@ -44,10 +44,12 @@ headSelect();
 
 /* api en uso https://apilayer.com/marketplace/exchangerates_data-api*/
 
-/* 
+
+/* Keys de api :  7E0bzmrA1Vxv1hYkbUEg1xq7iDBUFI97   o   BXTMG1IkUyV7t6f7dYJZUWUrxgyl9GJT  */
+
 async function cargarApi() {
     var myHeaders = new Headers();
-    myHeaders.append("apikey", "BXTMG1IkUyV7t6f7dYJZUWUrxgyl9GJT");
+    myHeaders.append("apikey", "7E0bzmrA1Vxv1hYkbUEg1xq7iDBUFI97");
 
     var requestOptions = {
         method: 'GET',
@@ -55,10 +57,10 @@ async function cargarApi() {
         redirect: 'follow'
     };
 
-    try { */
+    try { 
 
 /* API de Symbols (nombres de monedas) para el select */
-/* 
+
 const response1 = await fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions);
 dataSymbols = await response1.json();
 console.log(dataSymbols);
@@ -74,15 +76,13 @@ for (const key in dataSymbols.symbols) {
     optionElement2.text = dataSymbols.symbols[key];
     selectMoneda2.appendChild(optionElement2);
 
-} */
+} 
 
 /* Api de los valores de las monedas  */
 
-/*    const response2 = await fetch("https://api.apilayer.com/exchangerates_data/latest", requestOptions);
+   const response2 = await fetch("https://api.apilayer.com/exchangerates_data/latest", requestOptions);
    dataRates = await response2.json();
    console.log(dataRates);
-
-
 
 } catch (error) {
    console.log(error);
@@ -90,12 +90,12 @@ for (const key in dataSymbols.symbols) {
 }
 }
 
-cargarApi(); */
+cargarApi(); 
+
 
 
 
 /* Probar esta url de api https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP */
-
 
 
 /* 

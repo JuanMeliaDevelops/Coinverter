@@ -62,7 +62,7 @@
         <input type="number" id="moneda2" onkeypress='return validaNumeros(event)' name="moneda2" readonly>
       </div>
 
-      <button onclick="convertirMoneda();" id="boton" type="button" class="btn-dark btn-lg">Convertir</button>
+      <button onclick="convertirMoneda(resultadoAlerta);" id="boton" type="button" class="btn-dark btn-lg">Convertir</button>
 
     </form>
     <br>
@@ -97,8 +97,9 @@
 
   <!-- functions -->
   <script src="js/functions/conversor/apiMoneda.js"></script>
-  <script src="js/functions/conversor/swap.js"></script>
   <script src="js/functions/conversor/convertir.js"></script>
+  <script src="js/functions/conversor/swap.js"></script>
+
 
   <script src="js/functions/enterBoton.js"></script>
   <script src="js/functions/numberInput.js"></script>
