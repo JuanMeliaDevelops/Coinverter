@@ -32,7 +32,7 @@ async function convertirMoneda(resultadoAlerta) {
             console.log(dataResultado)
             const resultado = dataResultado.result;
             const resultadoOficial = parseFloat(resultado).toFixed(2);
-            resultadoAlerta.innerText = `Son ${resultadoOficial} ${selectMoneda2}`;
+            resultadoAlerta.innerText = `${resultadoOficial} ${selectMoneda2}`;
             document.getElementById("moneda2").value = resultadoOficial;
 
             guardarStorage(valorMoneda1, resultadoOficial, selectMoneda1, selectMoneda2);
