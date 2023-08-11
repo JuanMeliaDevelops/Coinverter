@@ -38,7 +38,7 @@ function cambioStorage(moneda1, moneda2, cantidad, resultado, fecha) {
 }
 
 
-function guardarStorage(valorMoneda1, resultado, selectMoneda1, selectMoneda2) {
+function guardarStorage(valorMoneda1, resultadoOficial, selectMoneda1, selectMoneda2) {
 
   const { dia, mes, horas, minutos } = queHoraEs();
   const fechaHoraString = `${dia} de ${mes} a las ${horas}:${minutos}`;
@@ -47,7 +47,7 @@ function guardarStorage(valorMoneda1, resultado, selectMoneda1, selectMoneda2) {
     selectMoneda1,
     selectMoneda2,
     valorMoneda1,
-    resultado,
+    resultadoOficial,
     fechaHoraString
   );
 

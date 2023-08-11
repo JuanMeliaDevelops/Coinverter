@@ -35,7 +35,7 @@ async function convertirMoneda(resultadoAlerta) {
             resultadoAlerta.innerText = `Son ${resultadoOficial} ${selectMoneda2}`;
             document.getElementById("moneda2").value = resultadoOficial;
 
-            guardarStorage(valorMoneda1, resultado, selectMoneda1, selectMoneda2);
+            guardarStorage(valorMoneda1, resultadoOficial, selectMoneda1, selectMoneda2);
 
         } catch (error) {
        /*      console.log(error);
