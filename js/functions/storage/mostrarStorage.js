@@ -25,7 +25,7 @@ function mostrarStorage() {
   }
   else {
 
-    for (let i = 0; i < Math.min(listaHistorialParse.length, 10); i++) {
+    for (let i = 0; i < Math.min(listaHistorialParse.length, 15); i++) {
       $('#plantillaCont').append(`
   
         <tr>
