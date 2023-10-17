@@ -1,3 +1,4 @@
+
 input[type="number"] {
     text-align: center;
     width: 25%;
@@ -81,6 +82,7 @@ header img {
 }
 
 .form-group {
+    justify-content: center;
     text-align: center;
     margin-top: 3%;
     margin-bottom: 2%;
@@ -156,6 +158,19 @@ header img {
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+    .form-group{
+        width: 60%;
+    }
+
+    header{
+        height: 10vh;
+    }
+
+    select{
+        margin: auto !important;
+        width: 40%;
+        
+    }
    
 
   }
