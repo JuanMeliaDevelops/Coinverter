@@ -3,8 +3,6 @@ function mostrarStorage() {
 
   const listaHistorialParse = JSON.parse(localStorage.getItem('storageJson'));
 
-  console.log(listaHistorialParse);
-
   if (!listaHistorialParse) {
     $("#plantilla").append(`
 

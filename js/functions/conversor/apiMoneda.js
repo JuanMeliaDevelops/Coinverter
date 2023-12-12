@@ -66,7 +66,6 @@ async function cargarApi() {
 
 const response1 = await fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions);
 dataSymbols = await response1.json();
-console.log(dataSymbols);
 
 for (const key in dataSymbols.symbols) {
     const optionElement1 = document.createElement("option");
@@ -85,39 +84,12 @@ for (const key in dataSymbols.symbols) {
 
    const response2 = await fetch("https://api.apilayer.com/exchangerates_data/latest", requestOptions);
    dataRates = await response2.json();
-   console.log(dataRates);
 
 } catch (error) {
-   console.log(error);
+
   resultadoAlerta.innerText = "Ha surgido un error, por favor inténtelo nuevamente más tarde";
 }
 }
 
 cargarApi(); 
-
-
-
-
-/* Probar esta url de api https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP */
-
-
-/* 
-function convertirMoneda() {
-const moneda1 = selectMoneda1.value;
-const moneda2 = selectMoneda2.value;
-    const monedaBase = dataRates.rates.EUR;
-    const moneda1 = selectMoneda1.value;
-    const moneda2 = selectMoneda2.value;
-
-    console.log(monedaBase);
-    console.log(moneda1);
-    console.log(moneda2);
-    console.log(dataRates.rates[moneda1])
-
-
-    const resultado1 = valorMoneda1 / monedaBase;
-    const resultadoTotal = resultado1 * dataRates.rates[moneda2];
-
-    valorMoneda2.innerText = resultadoTotal;
-    resultadoAlerta.innerText = `Son ${resultadoTotal} ${moneda2} `; */
 
