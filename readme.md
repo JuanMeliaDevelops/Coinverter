@@ -9,3 +9,4 @@ API DOLAR OFICIAL, BLUE :
 
 
 /* Keys de api :  7E0bzmrA1Vxv1hYkbUEg1xq7iDBUFI97   o   BXTMG1IkUyV7t6f7dYJZUWUrxgyl9GJT  */
+
